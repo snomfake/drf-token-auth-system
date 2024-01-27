@@ -26,3 +26,7 @@ jobs:
       run: |
         pipenv run python config/manage.py test
 
+    - name: Rub Black formatter
+      run: |
+        pipenv run run black .
+

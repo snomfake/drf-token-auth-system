@@ -28,5 +28,5 @@ jobs:
 
     - name: Rub Black formatter
       run: |
-        pipenv run run black .
+        pipenv run black .
 

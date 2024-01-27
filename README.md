@@ -1,6 +1,6 @@
 # Token authentication system using Django REST Framework
 
-## This project provides a simple **Token** authentication, using Django REST Frameword.
+## This project provides a simple **Token** authentication, using Django REST Framework.
 ## In this system provided 2 API-Endpoints:
 - To user login
 - To register a new user 
@@ -43,7 +43,6 @@ http://localhost:8000/token/login/ | jq
 
 ## If data not correct
 ```bash
-
 curl -sS -X POST \
 -H "Content-Type: application/json" \
 -d '{"username": "admin", "password":"no_secret_password"}' \
@@ -52,4 +51,9 @@ http://localhost:8000/token/login/ | jq
 {
   "detail": "Not found"
 }
+```
+
+## When you use permissions for your views, don't forget to pass the header with your token.
+```bash
+-H "Authorization: Token <your token>"
 ```

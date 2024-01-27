@@ -16,9 +16,7 @@ class SignInApiView(APIView):
         user = get_object_or_404(User, username=request.data["username"])
 
         if not user.check_password(request.data["password"]):
-            return Response(
-                {"detail": "Not found"}, status=status.HTTP_404_NOT_FOUND
-            )
+            return Response({"detail": "Not found"}, status=status.HTTP_404_NOT_FOUND)
 
         token, _ = Token.objects.get_or_create(user=user)
         return Response({"token": token.key}, status=status.HTTP_200_OK)
@@ -39,9 +37,7 @@ class SignUpApiView(APIView):
 
             token = Token.objects.create(user=user)
 
-            return Response(
-                {"token": token.key}, status=status.HTTP_201_CREATED
-            )
+            return Response({"token": token.key}, status=status.HTTP_201_CREATED)
         return Response(
             {"message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST
         )

@@ -9,6 +9,7 @@ djangorestframework = "==3.14.0"
 
 [dev-packages]
 coverage = "*"
+black = "*"
 
 [requires]
 python_version = "3.11"

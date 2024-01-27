@@ -6,5 +6,5 @@ repos:
         name: black
         entry: black .
         language: system
-        types: [python]
-        args: [--line-length=79]
+        args: ['--line-length', '88']
+        files: '\.py$'

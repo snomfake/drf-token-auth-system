@@ -16,7 +16,6 @@ python manage.py runserver
 ### Don't forget to change the database settings!!!
 
 # Usage
-## For example, in thish project added simple API-Endpoint for get list all item.
 
 ## Create a new user
 ```bash

@@ -13,6 +13,16 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
+
+## If you using Docker
+```bash
+
+git clone https://github.com/snomfake/drf-token-auth-system.git
+cd drf-token-auth-system
+docker build .
+docker run --rm -p 8000:8000 <image_id>
+```
+
 ### Don't forget to change the database settings!!!
 
 # Usage

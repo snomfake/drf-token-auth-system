@@ -20,13 +20,13 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pipenv install
+        pipenv install && pipenv install --dev
 
     - name: Run test
       run: |
         pipenv run python config/manage.py test
 
-    - name: Rub Black formatter
+    - name: Run Black formatter
       run: |
-        pipenv run run black .
+        pipenv run black .
 
